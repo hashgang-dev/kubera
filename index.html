@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kubera Associates | Trusted Loan Solutions</title>
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .dark .glass {
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      /* Navbar scroll effect */
+      .nav-scrolled {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
+
+      .dark .nav-scrolled {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      /* Hover animation */
+      .hover-lift {
+        transition: all 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Gradient text */
+      .gradient-text {
+        background: linear-gradient(90deg, #2563eb, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Glow */
+      .glow {
+        box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+      }
+    </style>
+  </head>
+
+  <body
+    class="overflow-x-hidden bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100"
+  >
+    <!-- Progress Bar -->
+    <div
+      id="progress-bar"
+      class="fixed top-0 left-0 h-1 bg-blue-600 z-50 w-0"
+    ></div>
+
+    <!-- Navbar -->
+    <nav
+      id="navbar"
+      class="fixed w-full max-w-full overflow-x-hidden z-50 transition-all duration-300 py-4 px-6 lg:px-20 flex justify-between items-center"
+    >
+      <!-- <div class="text-2xl font-bold text-blue-600 dark:text-yellow-500">
+        KUBERA ASSOCIATES
+      </div> -->
+      <div class="flex items-center gap-3">
+        <img
+          src="favicon.png"
+          alt="Kubera Associates Logo"
+          class="h-10 w-10 object-contain"
+        />
+        <span class="text-2xl font-bold text-blue-600 dark:text-yellow-500">
+          KUBERA ASSOCIATES
+        </span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-8 font-medium">
+        <a href="#home" class="hover:text-blue-500">Home</a>
+        <a href="#services" class="hover:text-blue-500">Services</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </div>
+
+      <!-- Right -->
+      <div class="flex items-center gap-4">
+        <!-- Mobile Menu Button -->
+        <button id="menu-toggle" class="text-2xl md:hidden">☰</button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="hidden fixed top-20 left-0 w-full bg-white dark:bg-gray-900 flex flex-col items-center space-y-6 py-6 shadow-lg md:hidden z-40"
+    >
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800"
+    >
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6" data-aos="fade-up">
+        Empowering Your <span class="gradient-text">Financial Future</span>
+      </h1>
+
+      <p
+        class="text-lg md:text-xl max-w-2xl mb-8 opacity-80"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Trusted partner for all loan solutions. We provide customized financial
+        guidance to help you grow.
+      </p>
+
+      <div class="flex space-x-4" data-aos="zoom-in" data-aos-delay="400">
+        <a
+          href="#services"
+          class="bg-blue-600 glow text-white px-8 py-3 rounded-full font-semibold hover-lift"
+        >
+          Explore Services
+        </a>
+        <a
+          href="#contact"
+          class="border border-blue-600 px-8 py-3 rounded-full font-semibold hover-lift hover:bg-blue-600 hover:text-white"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section
+      id="services"
+      class="py-20 px-6 lg:px-20 bg-white dark:bg-gray-900"
+    >
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Our Services</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 overflow-x-hidden">
+        <div class="p-8 rounded-2xl glass hover-lift" data-aos="fade-right">
+          <h3 class="text-2xl font-bold mb-4 text-blue-600">Loans</h3>
+          <ul class="space-y-2 opacity-80">
+            <li>• Business Loans</li>
+            <li>• Home Loans</li>
+            <li>• Personal Loans</li>
+            <li>• Loan Against Property</li>
+            <li>• Car & CV Loans</li>
+          </ul>
+        </div>
+
+        <div
+          class="p-8 rounded-2xl glass bg-blue-500 text-white shadow-xl hover-lift"
+          data-aos="fade-up"
+        >
+          <h3 class="text-2xl font-bold mb-4">Insurance</h3>
+          <ul class="space-y-2">
+            <li>• Life Insurance</li>
+            <li>• Health Insurance</li>
+            <li>• General Insurance</li>
+          </ul>
+        </div>
+
+        <div class="p-8 rounded-2xl glass hover-lift" data-aos="fade-left">
+          <h3 class="text-2xl font-bold mb-4 text-blue-600">
+            Special Services
+          </h3>
+          <ul class="space-y-2 opacity-80">
+            <li>• Overdraft (OD)</li>
+            <li>• CGTMSE Loans</li>
+            <li>• Equipment Loans</li>
+            <li>• Land Purchase Finance</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 px-6 lg:px-20 bg-gray-50 dark:bg-gray-800">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <h2 class="text-4xl font-bold mb-6">About Kubera Associates</h2>
+          <p class="text-lg opacity-80 mb-4">
+            Established in 2026, we provide reliable and customized financial
+            solutions.
+          </p>
+        </div>
+
+        <div class="md:w-1/2" data-aos="fade-left">
+          <div
+            class="w-full h-64 bg-white rounded-3xl flex items-center justify-center overflow-hidden shadow-md"
+          >
+            <img src="logo.png" class="h-full w-full object-contain p-6" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Counters -->
+    <section class="py-20 bg-blue-600 text-white text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <h2 class="text-3xl font-bold counter" data-target="500">0</h2>
+          <p>Loans Approved</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold counter" data-target="300">0</h2>
+          <p>Happy Clients</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold counter" data-target="50">0</h2>
+          <p>Partners</p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold counter" data-target="20">0</h2>
+          <p>Banks</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-100 dark:bg-gray-800 text-center">
+      <h2 class="text-4xl font-bold mb-10">Testimonials</h2>
+
+      <div>
+        <div class="testimonial">"Great service!" - Ramesh</div>
+        <div class="testimonial hidden">"Fast loan approval!" - Suresh</div>
+        <div class="testimonial hidden">"Very helpful team!" - Kavitha</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-12 px-6 lg:px-20 bg-gray-900 text-white">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-10">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+          <p class="opacity-70">#59-6-19, Kanchukota Vari Street,</p>
+          <p class="opacity-70">Gayatri Nagar, VIJAYAWADA - 520008.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+          <p>Email: sales@kuberaassociates.com</p>
+          <p>Web: www.kuberaassociates.com</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Our Vision</h3>
+          <p class="italic opacity-60">
+            "To become a trusted and leading financial service provider in the
+            region."
+          </p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8 text-center opacity-50 text-sm">
+        &copy; 2026 Kubera Associates. All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a
+      href="https://wa.me/918121957804?text=Hi, Kubera Associates."
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="white"
+        class="w-7 h-7"
+      >
+        <path
+          d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.48 0 .16 5.32.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.32-1.65a11.9 11.9 0 0 0 5.74 1.47h.01c6.58 0 11.9-5.32 11.9-11.9 0-3.18-1.24-6.16-3.45-8.44zM12.07 21.5a9.6 9.6 0 0 1-4.9-1.34l-.35-.2-3.75.98 1-3.66-.23-.37a9.62 9.62 0 1 1 8.23 4.59zm5.57-7.4c-.3-.15-1.76-.87-2.03-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.07-.15-.67-1.6-.92-2.18-.24-.58-.48-.5-.67-.51h-.56c-.2 0-.53.07-.8.36-.27.3-1.04 1-1.04 2.45 0 1.44 1.05 2.83 1.2 3.03.15.2 2.07 3.13 5 4.4.7.3 1.24.5 1.66.63.7.22 1.32.19 1.82.1.56-.09 1.73-.7 1.98-1.38.25-.68.25-1.25.17-1.38-.08-.12-.28-.2-.57-.35z"
+        />
+      </svg>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({ duration: 1000, once: true });
+
+      // Navbar scroll
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("nav-scrolled", "shadow-lg");
+        } else {
+          navbar.classList.remove("nav-scrolled", "shadow-lg");
+        }
+      });
+
+      // Mobile menu
+      const menuBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.onclick = () => {
+        mobileMenu.classList.toggle("hidden");
+      };
+
+      const mobileLinks = document.querySelectorAll("#mobile-menu a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          setTimeout(() => {
+            mobileMenu.classList.add("hidden");
+          }, 100);
+        });
+      });
+
+      // Progress bar
+      const progressBar = document.getElementById("progress-bar");
+
+      window.addEventListener("scroll", () => {
+        const scroll = window.scrollY;
+        const height = document.body.scrollHeight - window.innerHeight;
+        progressBar.style.width = (scroll / height) * 100 + "%";
+      });
+
+      // Counter
+      const counters = document.querySelectorAll(".counter");
+      window.addEventListener("scroll", () => {
+        counters.forEach((c) => {
+          const target = +c.dataset.target;
+          let count = +c.innerText;
+          if (count < target) c.innerText = Math.ceil(count + target / 50);
+        });
+      });
+
+      // Testimonials
+      let i = 0;
+      const t = document.querySelectorAll(".testimonial");
+      setInterval(() => {
+        t[i].classList.add("hidden");
+        i = (i + 1) % t.length;
+        t[i].classList.remove("hidden");
+      }, 3000);
+    </script>
+  </body>
+</html>

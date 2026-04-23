@@ -238,20 +238,44 @@
     <section class="py-20 bg-blue-600 text-white text-center">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div>
-          <h2 class="text-3xl font-bold counter" data-target="500">0</h2>
+          <h2
+            class="text-3xl font-bold counter"
+            data-target="1215"
+            data-suffix="+"
+          >
+            0
+          </h2>
           <p>Loans Approved</p>
         </div>
         <div>
-          <h2 class="text-3xl font-bold counter" data-target="300">0</h2>
+          <h2
+            class="text-3xl font-bold counter"
+            data-target="1000"
+            data-suffix="+"
+          >
+            0
+          </h2>
           <p>Happy Clients</p>
         </div>
         <div>
-          <h2 class="text-3xl font-bold counter" data-target="50">0</h2>
+          <h2
+            class="text-3xl font-bold counter"
+            data-target="50"
+            data-suffix="+"
+          >
+            0
+          </h2>
           <p>Partners</p>
         </div>
         <div>
-          <h2 class="text-3xl font-bold counter" data-target="20">0</h2>
-          <p>Banks</p>
+          <h2
+            class="text-3xl font-bold counter"
+            data-target="36"
+            data-suffix="+"
+          >
+            0
+          </h2>
+          <p>Support Team</p>
         </div>
       </div>
     </section>
@@ -357,8 +381,14 @@
       window.addEventListener("scroll", () => {
         counters.forEach((c) => {
           const target = +c.dataset.target;
-          let count = +c.innerText;
-          if (count < target) c.innerText = Math.ceil(count + target / 50);
+          const suffix = c.dataset.suffix || "";
+          let count = +c.innerText.replace(/\D/g, "");
+
+          if (count < target) {
+            c.innerText = Math.ceil(count + target / 50) + suffix;
+          } else {
+            c.innerText = target + suffix;
+          }
         });
       });
 

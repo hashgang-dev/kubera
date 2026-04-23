@@ -15,6 +15,12 @@
     />
 
     <style>
+      :root {
+        --primary: #e2a82b;
+        --secondary: #526b27;
+        --dark: #16294a;
+      }
+
       html {
         scroll-behavior: smooth;
       }
@@ -52,8 +58,8 @@
 
       /* Navbar scroll effect */
       .nav-scrolled {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.8);
+        border-bottom: 2px solid var(--primary);
       }
 
       /* Hover animation */
@@ -68,14 +74,14 @@
 
       /* Gradient text */
       .gradient-text {
-        background: linear-gradient(90deg, #2563eb, #06b6d4);
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
       /* Glow */
       .glow {
-        box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+        box-shadow: 0 0 15px rgba(226, 168, 43, 0.6);
       }
     </style>
   </head>
@@ -84,7 +90,7 @@
     <!-- Progress Bar -->
     <div
       id="progress-bar"
-      class="fixed top-0 left-0 h-1 bg-blue-600 z-50 w-0"
+      class="fixed top-0 left-0 h-1 bg-[var(--primary)] z-50 w-0"
     ></div>
 
     <!-- Navbar -->
@@ -98,17 +104,17 @@
           alt="Kubera Associates Logo"
           class="h-10 w-10 object-contain"
         />
-        <span class="text-2xl font-bold text-blue-600">
+        <span class="text-2xl font-bold text-[var(--primary)]">
           KUBERA ASSOCIATES
         </span>
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-8 font-medium">
-        <a href="#home" class="hover:text-blue-500">Home</a>
-        <a href="#services" class="hover:text-blue-500">Services</a>
-        <a href="#about" class="hover:text-blue-500">About</a>
-        <a href="#contact" class="hover:text-blue-500">Contact</a>
+        <a href="#home" class="hover:text-[var(--primary)]">Home</a>
+        <a href="#services" class="hover:text-[var(--primary)]">Services</a>
+        <a href="#about" class="hover:text-[var(--primary)]">About</a>
+        <a href="#contact" class="hover:text-[var(--primary)]">Contact</a>
       </div>
 
       <!-- Right -->
@@ -159,7 +165,7 @@
         <div class="flex space-x-4">
           <a
             href="#services"
-            class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold"
+            class="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold"
           >
             Explore Services
           </a>
@@ -177,12 +183,12 @@
     <section id="services" class="py-20 px-6 lg:px-20 bg-white">
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold mb-4">Our Services</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+        <div class="w-20 h-1 bg-[var(--primary)] mx-auto"></div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 overflow-x-hidden">
         <div class="p-8 rounded-2xl glass hover-lift" data-aos="fade-right">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">Loans</h3>
+          <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">Loans</h3>
           <ul class="space-y-2 opacity-80">
             <li>• Business Loans</li>
             <li>• Home Loans</li>
@@ -193,7 +199,7 @@
         </div>
 
         <div
-          class="p-8 rounded-2xl glass bg-blue-500 text-white shadow-xl hover-lift"
+          class="p-8 rounded-2xl glass bg-[var(--secondary)] text-white shadow-xl hover-lift"
           data-aos="fade-up"
         >
           <h3 class="text-2xl font-bold mb-4">Insurance</h3>
@@ -205,7 +211,7 @@
         </div>
 
         <div class="p-8 rounded-2xl glass hover-lift" data-aos="fade-left">
-          <h3 class="text-2xl font-bold mb-4 text-blue-600">
+          <h3 class="text-2xl font-bold mb-4 text-[var(--primary)]">
             Special Services
           </h3>
           <ul class="space-y-2 opacity-80">
@@ -242,7 +248,7 @@
     </section>
 
     <!-- Counters -->
-    <section class="py-20 bg-blue-600 text-white text-center">
+    <section class="py-20 bg-[var(--primary)] text-white text-center">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div>
           <h2
@@ -310,7 +316,7 @@
           <a
             href="https://maps.app.goo.gl/MHk4m1DxigT2P7sg9"
             target="_blank"
-            class="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition"
+            class="inline-block mt-4 bg-[var(--primary)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--secondary)] transition"
           >
             📍 Get Directions
           </a>
@@ -322,7 +328,7 @@
             Email:
             <a
               href="mailto:sales@kuberaassociates.com"
-              class="text-blue-600 hover:underline"
+              class="text-[var(--primary)] hover:underline"
             >
               sales@kuberaassociates.com
             </a>

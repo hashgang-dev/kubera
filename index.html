@@ -251,43 +251,19 @@
     <section class="py-20 bg-[var(--primary)] text-white text-center">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div>
-          <h2
-            class="text-3xl font-bold counter"
-            data-target="1215"
-            data-suffix="+"
-          >
-            0
-          </h2>
+          <h2 class="text-3xl font-bold counter">1215+</h2>
           <p>Loan Approvals</p>
         </div>
         <div>
-          <h2
-            class="text-3xl font-bold counter"
-            data-target="1000"
-            data-suffix="+"
-          >
-            0
-          </h2>
+          <h2 class="text-3xl font-bold counter">1k+</h2>
           <p>Happy Clients</p>
         </div>
         <div>
-          <h2
-            class="text-3xl font-bold counter"
-            data-target="50"
-            data-suffix="+"
-          >
-            0
-          </h2>
+          <h2 class="text-3xl font-bold counter">50+</h2>
           <p>Channel Partners</p>
         </div>
         <div>
-          <h2
-            class="text-3xl font-bold counter"
-            data-target="36"
-            data-suffix="+"
-          >
-            0
-          </h2>
+          <h2 class="text-3xl font-bold counter">36+</h2>
           <p>Support Team</p>
         </div>
       </div>
@@ -439,22 +415,6 @@
         const scroll = window.scrollY;
         const height = document.body.scrollHeight - window.innerHeight;
         progressBar.style.width = (scroll / height) * 100 + "%";
-      });
-
-      // Counter
-      const counters = document.querySelectorAll(".counter");
-      window.addEventListener("scroll", () => {
-        counters.forEach((c) => {
-          const target = +c.dataset.target;
-          const suffix = c.dataset.suffix || "";
-          let count = +c.innerText.replace(/\D/g, "");
-
-          if (count < target) {
-            c.innerText = Math.ceil(count + target / 50) + suffix;
-          } else {
-            c.innerText = target + suffix;
-          }
-        });
       });
 
       // Testimonials

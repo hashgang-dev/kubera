@@ -3,17 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kubera Associates | Trusted Loan Solutions</title>
+    <!-- SEO -->
+    <title>
+      Kubera Associates | Trusted Partner for all Loan Solutions in Vijayawada
+    </title>
 
+    <meta
+      name="description"
+      content="Kubera Associates is a trusted financial services and loan consultancy firm in Vijayawada offering business loans, home loans, personal loans, insurance, OD loans, LAP, CGTMSE loans and more across India."
+    />
+    <meta
+      name="keywords"
+      content="Business Loans Vijayawada, Home Loans Vijayawada, Personal Loans Andhra Pradesh, Loan Consultancy Vijayawada, Financial Services Vijayawada, Insurance Services Vijayawada, MSME Loans India, Loan Against Property, CGTMSE Loans, Car Loans Vijayawada, OD Loans India"
+    />
+    <meta name="author" content="Kubera Associates" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#e2a82b" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://kuberaassociates.com/" />
+    <!-- Geo SEO -->
+    <meta name="geo.region" content="IN-AP" />
+    <meta name="geo.placename" content="Vijayawada" />
+    <meta name="geo.position" content="16.5062;80.6480" />
+    <meta name="ICBM" content="16.5062,80.6480" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Kubera Associates | Trusted Partner for all Loan Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Trusted partner for all loan solutions. Business loans, home loans, personal loans and insurance services across India."
+    />
+    <meta property="og:url" content="https://kuberaassociates.com/" />
+    <meta property="og:image" content="https://kuberaassociates.com/logo.png" />
+    <meta property="og:site_name" content="Kubera Associates" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Kubera Associates | Trusted Partner for all Loan Solutions"
+    />
+    <meta
+      name="twitter:description"
+      content="Trusted financial consultancy for loans, insurance and funding solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://kuberaassociates.com/logo.png"
+    />
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Kubera Associates",
+        "url": "https://kuberaassociates.com/",
+        "logo": "https://kuberaassociates.com/logo.png",
+        "description": "Trusted partner for all loan solutions offering business loans, home loans, personal loans and insurance services.",
+        "telephone": ["+91 81219 57804", "+91 99590 91461", "+91 91605 39999"],
+        "email": "sales@kuberaassociates.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "#59-6-19, Kanchukota Vari Street, Gayatri Nagar",
+          "addressLocality": "Vijayawada",
+          "addressRegion": "Andhra Pradesh",
+          "postalCode": "520008",
+          "addressCountry": "IN"
+        },
+        "areaServed": "India",
+        "sameAs": [
+          "https://facebook.com/yourpage",
+          "https://instagram.com/yourpage",
+          "https://linkedin.com/company/yourpage"
+        ]
+      }
+    </script>
     <style>
       :root {
         --primary: #e2a82b;
@@ -99,10 +182,12 @@
       class="fixed w-full max-w-full overflow-x-hidden z-50 transition-all duration-300 py-4 px-6 lg:px-20 flex justify-between items-center"
     >
       <div class="flex items-center gap-3">
+        <!-- LOGO -->
         <img
           src="favicon.png"
           alt="Kubera Associates Logo"
           class="h-10 w-10 object-contain"
+          loading="eager"
         />
         <span class="text-2xl font-bold text-[var(--primary)]">
           KUBERA ASSOCIATES
@@ -120,7 +205,13 @@
       <!-- Right -->
       <div class="flex items-center gap-4">
         <!-- Mobile Menu Button -->
-        <button id="menu-toggle" class="text-2xl md:hidden">☰</button>
+        <button
+          id="menu-toggle"
+          class="text-2xl md:hidden"
+          aria-label="Open Mobile Menu"
+        >
+          ☰
+        </button>
       </div>
     </nav>
 
@@ -142,10 +233,30 @@
     >
       <!-- Background Images -->
       <div class="absolute inset-0 z-0">
-        <img src="bg1.png" class="hero-bg active" />
-        <img src="bg2.png" class="hero-bg" />
-        <img src="bg3.png" class="hero-bg" />
-        <img src="bg4.png" class="hero-bg" />
+        <img
+          src="bg1.png"
+          class="hero-bg active"
+          alt="Business Loan Services Vijayawada"
+          loading="eager"
+        />
+        <img
+          src="bg2.png"
+          class="hero-bg"
+          alt="Home Loan Consultancy Services"
+          loading="lazy"
+        />
+        <img
+          src="bg3.png"
+          class="hero-bg"
+          alt="Insurance and Financial Services"
+          loading="lazy"
+        />
+        <img
+          src="bg4.png"
+          class="hero-bg"
+          alt="Trusted Loan Solutions India"
+          loading="lazy"
+        />
       </div>
 
       <!-- Overlay (for readability) -->
@@ -241,7 +352,13 @@
           <div
             class="w-full h-64 bg-white rounded-3xl flex items-center justify-center overflow-hidden shadow-md"
           >
-            <img src="logo.png" class="h-full w-full object-contain p-6" />
+            <!-- ABOUT LOGO -->
+            <img
+              src="logo.png"
+              class="h-full w-full object-contain p-6"
+              alt="Kubera Associates Financial Services"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
@@ -362,6 +479,7 @@
     <a
       href="https://wa.me/918121957804?text=Hi, Kubera Associates."
       target="_blank"
+      aria-label="Chat with Kubera Associates on WhatsApp"
       class="fixed bottom-6 right-6 z-50 bg-green-500 p-4 rounded-full shadow-lg hover:scale-110 transition flex items-center justify-center"
     >
       <svg
